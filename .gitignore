@@ -1,10 +1,5 @@
 /node_modules
-.idea/sonarlint/issuestore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-.idea/sonarlint/issuestore/f/a/fa288d1472d29beccb489a676f68739ad365fc47
-.idea/sonarlint/securityhotspotstore/3/a/3add7b9612102f2a7dbe4ed4fe886e07e847c24d
-.idea/sonarlint/securityhotspotstore/index.pb
-.idea/sonarlint/securityhotspotstore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-.idea/sonarlint/securityhotspotstore/f/a/fa288d1472d29beccb489a676f68739ad365fc47
-.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-.parcel-cache
+/.parcel-cache
+/dist
+/.idea
+
