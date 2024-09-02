@@ -1,4 +1,5 @@
 .header{
+    padding: 10px;
     display:flex;
     justify-content: space-between;
     border: 1px solid black;
@@ -25,7 +26,7 @@
     border-radius: 5px;
     background-color: rgb(207, 207, 207);
     padding: 5px;
-    width: 300px;
+    width: 190px;
     border: 1px solid rgb(134, 132, 132);
 }
 
@@ -46,4 +47,27 @@
 .res-container{
     display: flex;
     flex-wrap: wrap;
+}
+
+.filter-btn{
+    margin: 10px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(233, 233, 233);
+    padding: 5px;
+    width: 190px;
+    height: 400px;
+}
+
+.login{
+    padding: 0 20px;
+    cursor: pointer;
 }
