@@ -6,6 +6,7 @@ const Body = () => {
   const [resList, setResList] = useState([]);
 
   useEffect(()=>{
+    fetchData();
   },[]);
 
 
@@ -16,8 +17,10 @@ const Body = () => {
 
     console.log(json)
 
-    setResList(json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setResList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   }
+
+
 
   return resList.length===0? (
     <Shimmer/>
