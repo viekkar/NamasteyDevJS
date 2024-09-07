@@ -6,25 +6,25 @@ const Header = () => {
     const [btnNameReact, setBtnNameReact] = useState("Login");
 
     return (
-        <div className="header">
+        <div className="flex bg bg-pink-200 justify-between shadow-xl">
             <div>
-                <img className="logo" src={LOGO_URL} />
+                <img className="w-40" src={LOGO_URL} />
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li>
+            <div className="flex items-center">
+                <ul className="flex px-6" >
+                    <li className="px-6">
                         <Link to="/">Home</Link>
                     </li>
-                    <li>
+                    <li className="px-6">
                         <Link to="/about">About us</Link>
                     </li>
-                    <li>
+                    <li className="px-6">
                         <Link to="/contact">contact us</Link>
                     </li>
-                    <li>
+                    <li className="px-6">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li> cart </li>
+                    <li className="px-6"> cart </li>
                     <button
                         className="login"
                         onClick={() => {

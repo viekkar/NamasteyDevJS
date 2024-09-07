@@ -25,60 +25,59 @@ const Body = () => {
       json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
 
-    setFilteredRestaurant(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+    setFilteredRestaurant(
+      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+    );
   };
 
   return resList.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="flex">
+        <div className="m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="border border-solid border-green-200 hover:shadow-lg"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
-
-
-              // CREATED ON SIMULTANEOUS SEARCH
-              // const filteredRestaurant=resList.filter(
-              //   (res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
-
-              //   setFilteredRestaurant(filteredRestaurant)
-              //   if(e.target.value===""){
-              //     setFilteredRestaurant(resList)
-              //   }
             }}
           ></input>
           <button
+            className="px-4 py-0.5 bg-green-200 hover:shadow-lg rounded-lg"
             onClick={() => {
               console.log(searchText);
-              const filteredRestaurant=resList.filter(
-                (res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
-                setFilteredRestaurant(filteredRestaurant)
+              const filteredRestaurant = resList.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredRestaurant(filteredRestaurant);
             }}
           >
             Search
           </button>
+          <button
+            className="px-4 py-0.5 bg-green-200 mx-4 hover:shadow-lg rounded-lg"
+            onClick={() => {
+              filteredResList = resList.filter(
+                (res) => res.info.avgRating > 4.3
+              );
+              setResList(filteredResList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            filteredResList = resList.filter(
-              (res) => res.info.avgRating > 4.3);
-            setResList(filteredResList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
-          <Link 
-          key={restaurant.info.id}
-          to={"/restaurants/"+restaurant.info.id}> <RestaurantCard resData={restaurant} /></Link>
+          <Link
+            key={restaurant.info.id}
+            to={"/restaurants/" + restaurant.info.id}
+          >
+            {" "}
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
